@@ -10,3 +10,9 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE("Verify celcius to fahrenheit conversion works") {
+	REQUIRE(get_fahrenheit(37) == Approx(98.6));
+	REQUIRE(get_fahrenheit(25) == 77);
+	REQUIRE(get_fahrenheit(0) == 32);
+}
